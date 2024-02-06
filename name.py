@@ -1,0 +1,1 @@
+print('it\'s a boy\njumoke\nizunna')
