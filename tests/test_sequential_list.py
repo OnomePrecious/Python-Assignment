@@ -1,6 +1,6 @@
 import unittest
 
-import sequential_list
+from phone_book.Class_work import sequential_list
 
 
 class MyTestCase(unittest.TestCase):
@@ -12,6 +12,6 @@ class MyTestCase(unittest.TestCase):
     def test_that_sum_of_elements_is_returned(self):
         sample_set =( 1, 2, 3, 4, 5, 6,)
         sample_out = 21
-        self.assertEqual(sequential_list.sum_collection(sample_set),sample_out)
+        self.assertEqual(sequential_list.sum_collection(sample_set), sample_out)
 
 

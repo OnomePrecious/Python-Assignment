@@ -1,10 +1,11 @@
+from dataclasses import dataclass
 from decimal import Decimal
 
 
+@dataclass(order=True)
 class Account:
-    def __init__(self, name, balance: Decimal):
-        self.name = name
-        self.__balance = balance
+    name: str
+    balance: Decimal
 
     @property
     def balance(self):
@@ -20,5 +21,5 @@ class Account:
         return f"Name: {self.name} Balance: {self.__balance}"
 
 
-a1 = Account('Precious',Decimal(100.0))
+a1 = Account('Precious', Decimal(100.0))
 print(a1)

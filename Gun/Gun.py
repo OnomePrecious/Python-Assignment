@@ -1,19 +1,26 @@
 class Gun:
-    def __init__(self, name, caliber,  magazine):
-        self._name = name
-        self._caliber = caliber
-        self._magazine = magazine
+    def __init__(self, pin):
         self._ammo_count = 0
+        self._pin = pin
 
     def get_ammo_count(self):
         return self._ammo_count
 
-    def load(self, amount):
+    def pin(self):
+        self.pin = self.pin
+        if self._pin == self._pin:
+            return self.pin
+
+    def load(self, amount, pin):
+        pin(pin)
         self._ammo_count += amount
 
-    def shoot(self):
+     def shoot(self, pin):
+        self.pin = pin
+        if pin == pin:
+            return self.pin
+
         if self._ammo_count > 0:
             return "kpa"
         else:
-            if self._ammo_count < 0:
-                return "Out of bullet"
+            return "Out of bullet"
