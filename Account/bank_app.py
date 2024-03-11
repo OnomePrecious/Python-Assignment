@@ -6,9 +6,6 @@ class BankApp:
     def __init__(self):
         self.accounts = {}
 
-
-def main():
-
     while True:
         print("""
         Welcome to my bank App, what would you like to do?",
@@ -53,14 +50,14 @@ def main():
 
         elif option == "6":
             account_number = input("Enter account number to delete account: ")
-            bank.Bank.remove_account(self, account_number)
+            bank.Bank.remove_account(bank, account_number)
 
         elif option == "7":
             account_number = input("Enter account number: ")
             receiver_account_number = input("Enter account number: ")
             amount = float(input("Enter amount to transfer: "))
             pin = input("Enter pin: ")
-            bank.Bank.transfer(self, account_number, receiver_account_number, amount, pin)
+            bank.Bank.transfer(bank, account_number, receiver_account_number, amount, pin)
 
         elif option == "8":
             print("Exiting the bank app.")
