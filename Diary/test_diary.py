@@ -3,7 +3,7 @@ import unittest
 from Diary.diary import Diary
 
 
-class MyTestCase(unittest.TestCase):
+class TestCase(unittest.TestCase):
     def test_create_entry(self):
         my_diary = Diary("Precious", "1234")
         my_diary.create_entry("Had i known", "story of my life")

@@ -39,3 +39,6 @@ class Account:
 
     def get_account_number(self):
         return self._number
+
+    def __repr__(self):
+        return f"Account Name: {self._name}: Account Number: {self._number}"

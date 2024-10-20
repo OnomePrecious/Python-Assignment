@@ -1,5 +1,4 @@
 from Account.exception.invalid_password_error import InvalidPasswordError
-from Diary.diary_app import password
 from Diary.entry import *
 
 
@@ -11,13 +10,14 @@ class Diary:
         self.entries = []
         self.id = 1
 
-    def lock_diary(self) -> None:
+    def lock_diary(self, password) -> None:
+        self.validate_password(password)
         self.locked = True
 
     def unlock_diary(self):
         self.locked = False
 
-    def validate_password(self):
+    def validate_password(self, password):
         if self.password != password:
             raise InvalidPasswordError("input correct password")
         else:
